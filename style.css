@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&display=swap');
+/* utilities */
+:root{
+    --DarkBlue :hsl(230, 29%, 20%);
+    --GrayishBlue: hsl(230, 11%, 40%);
+    --Blue: hsl(231, 7%, 65%);
+    --LightGrayishBlue:hsl(207, 33%, 95%);
+    --font: Barlow;
+    --btn:hsl(0, 100%, 68%);
+}
+
+*{
+    box-sizing: border-box;
+    list-style: none;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: var(--font);
+    overflow-x: hidden ;
+}
+/* page container */
+.main-container{
+    width: 80%;
+    margin: 0 auto;
+}
+/* head section */
+.head-content{
+    width: 95%;
+    margin: 30px 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+/* navigation bar */
+.nav-bar{
+    margin-left: -100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-bar  li{
+    margin: 0 10px;
+    font-weight: 400;
+}
+
+.nav-bar  li a{
+    text-decoration: none;
+    padding: 0 10px;
+    color: var(--DarkBlue);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 16px;
+}
+.nav-bar li a:hover{
+text-decoration: underline;
+}
+
+#login{
+    color: var(--Blue);
+}
+
+.icon{
+    display: none;
+}
+/* background design */
+.design{
+    width: 65%;
+    height: 350px;
+    border: none;
+    border-radius: 0 0 0 50px;
+    background-color: var(--LightGrayishBlue);
+    position: absolute;
+    right: -180px;
+    top:0;
+    z-index: -1;
+}
+/* write up section */
+.highlight{
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ margin: 40px 0;
+ position: relative;
+}
+/* page image */
+.image img{
+    width: 180%;
+    height: 180%;  
+    margin-right: 10px;
+}
+
+.intro{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.para span{
+    background-color: var(--DarkBlue);
+    color: var(--LightGrayishBlue);
+    font-size: 18px;
+    padding: 5px 10px;
+    font-weight: 400;
+    border-radius: 20px;
+    border: none;
+    display: inline-block;
+    margin-right: 10px;
+}
+.para p{
+    color:var(--GrayishBlue);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+.main-hightlight{
+    width: 80%;
+    margin-top: -40px;
+}
+.main-hightlight h1{
+    font-size: 3rem;
+    color: var(--DarkBlue);
+    text-transform: uppercase;
+    font-weight:700;
+}
+.description p{
+    color: var(--Blue);
+    font-size: 18px;
+    font-weight: 400;
+    width: 80%;
+    margin-top: -25px;
+
+}
+/* button section */
+.schedule{
+    margin-top: 30px;
+}
+.schedule input{
+    background-color: var(--btn);
+    padding: 10px 20px;
+    text-transform: uppercase;
+    font-size: 14px;
+    border: none;
+    color: var(--LightGrayishBlue);
+    border-radius: 5px;
+    display: inline-block;
+    margin-right: 10px;
+}
+.schedule input:hover{
+    cursor:pointer;
+}
+
+.preview{
+    text-transform: uppercase;
+    font-size: 14px;
+    color: var(--Blue);
+    word-spacing: 3px;
+}
+/* footer section */
+.attribution { font-size: 16px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+@media screen and (max-width:500px) {
+
+    .main-container{
+        width: 90%;
+        
+    }
+    .head-content{
+        width: 100%;
+        margin: 20px auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+    }
+    .head-content .nav-bar{
+        display: none;
+    }
+    
+    .head-content .show-nav {
+        display: block;
+        width: 90%;
+        margin: 0 auto;
+        position: absolute;
+        top: 60px;
+        left: 18px;
+        background-color: #fff;
+        padding: 20px;
+        z-index: 2;
+        box-shadow: 2px 6px 8px var(--GrayishBlue);
+    }
+    .show-nav li{
+        width: 100%;
+        margin: 10px auto;
+        text-align: center;
+    }
+
+    #dot{
+        display: none;
+    }
+    .show-nav li a{
+        width: 100%;
+        display: block;
+        margin: 10px auto;
+        font-size: 18px;
+        padding: 15px 10px;
+    }
+    #login{
+        border-top: 2px solid var(--Blue);
+    }
+    .icon{
+        display: block;
+    }
+    .design{
+        width: 65%;
+        height: 500px;
+        border: none;
+        border-radius: 0 0 0 50px;
+        background-color: var(--LightGrayishBlue);
+        position: absolute;
+        right: -90px;
+        top:0;
+        z-index: -1;
+    }
+    .highlight{
+        display:grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        gap: 30px;
+        grid-template-areas: 
+        't'
+        'b';
+       }
+       .image {
+        grid-area: t;
+        display: initial;
+        margin-top: 30px;
+    }
+       .image img{
+        width: 150%;
+        height: 150%;  
+        margin-left:20px;
+        
+    }
+    .intro{
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        grid-area: b;
+        margin: 40px auto;
+       
+    }
+    .para{
+        width: 100%;
+        text-align: left;
+    }
+    .para span{
+        font-size: 12px;
+        margin-right: 5px;
+        
+    }
+    .para p{
+        color:var(--GrayishBlue);
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        font-weight: 400;
+        font-size: 15px;
+    }
+    .main-hightlight{
+        width: 100%;
+    }
+    .main-hightlight h1{
+        font-size: 2rem;
+        text-align: left;
+        color: var(--DarkBlue);
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-top: 40px;
+    }
+    .description p{
+        font-size: 16px;
+        width: 90%;
+        margin-top: 5px;
+    }
+    .schedule{
+        margin-top: 20px;
+    }
+    .schedule input{
+        padding: 10px 10px;
+        font-size: 12px;
+        margin-right: 10px;
+    }
+   
+    .preview{
+        font-size: 14px;
+        word-spacing: 1px;
+    }
+    .attribution { font-size: 12px;margin-top: -40px;}
+}
